@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Hand Gesture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+      <h3 class = "btn btn-warning heading">Hand Gesture App</h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate Hand Gesture
+      	<br>
+        <b style="color: yellow">Are you saying Okay?</b>
+        <br>
+        <b style="color: black">Are you saying Bonjour?</b>
+        <br>
+        <b style="color: red">Are you saying 4?</b>
+        <br>
+        <b style="color: green">Are you saying Nothing?</b>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Webcam View - </label>
+        <div id = "camera"></div>
+        <br><br>
+        <button onclick="take_snapshot()" class="btn btn-success">Capture Hand Gesture</button>
+      </div>
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Predicter Predicts 1 - </label>
+        <p class = "emotion_name" id = "result_emotion_name1"></p>
+        <p class = "emoji" id = "update_emoji"></p>
+        <br>
+        <br>
+        <label>Predicter Predicts 2 - </label>
+        <p class = "emotion_name" id = "result_emotion_name2"></p>
+        <p class = "emoji" id = "update_emoji"></p>
+      </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <label>Predicter View - </label>
+          <div id = "result"></div>
+          <br><br>
+          <button onclick="predict_gesture();" class="btn btn-success">Ask Predicter To Predict Hand Gesture</button>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <p id = "byWhom">By THE PREDICTER</p>
+          </div>
+          </div>
+        
+      
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
+
+ 
